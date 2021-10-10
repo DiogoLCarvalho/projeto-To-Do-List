@@ -11,33 +11,30 @@
 
 <body>
     <!-- https://medium.muz.li/todo-list-inspiration-a1d736c2718a#.44a7j8nkk = Inspiração Design -->
+    <!-- Colocar botão do meu nome e a referencia de estilo acima -->
+    <!-- Colocar botão para mudar a cor do estilo -->
+    <!-- Deixar responsivo -->
+    <!-- Talvez colocar Local Storage -->
+    <!-- Comentar passo a passo Github -->
+    
     <main id="container">
         <header id="container__header">
             <h1>To Do List</h1>
         </header>
         <section id="container__content">
             <div id="content__tasks">
-                <ul>
-                    <li>
-                        <input type="checkbox" id="checkbox__1"> 
-                        <label for="checkbox__1"><p>Teste 1</p></label>
-                        <img src="img/bin.png" alt="trash can">
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox__2"> 
-                        <label for="checkbox__2"><p>Teste 2</p></label>
-                        <img src="img/bin.png" alt="trash can">
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox__3"> 
-                        <label for="checkbox__3"><p>Teste 3</p></label>
-                        <img src="img/bin.png" alt="trash can">
+                <ul id="tasks__list">
+                    <li class="hide list__item">
+                        <input type="checkbox" id="checkbox__"> 
+                        <label for="checkbox__" id="label"><p class="label__text"></p></label>
+                        <img class="trash" src="img/bin.png" alt="trash can">
                     </li>
                 </ul>
             </div>
         </section>
         <section id="container__add">
-            <input id="content__text" type="text" placeholder="Escreva uma nova tarefa" maxlength="30" required>
+            
+            <input id="content__text" type="text" placeholder="Escreva uma nova tarefa" maxlength="30" >
 
             <button id="add" type="submit">+ Nova Tarefa</button>
         </section>

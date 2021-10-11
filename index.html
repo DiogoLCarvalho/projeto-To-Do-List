@@ -10,13 +10,11 @@
 </head>
 
 <body>
-    <!-- https://medium.muz.li/todo-list-inspiration-a1d736c2718a#.44a7j8nkk = Inspiração Design -->
-    <!-- Colocar botão do meu nome e a referencia de estilo acima -->
-    <!-- Colocar botão para mudar a cor do estilo -->
+    <!-- Fazer os comandos de Mudar o tema -->
     <!-- Deixar responsivo -->
     <!-- Talvez colocar Local Storage -->
     <!-- Comentar passo a passo Github -->
-    
+
     <main id="container">
         <header id="container__header">
             <h1>To Do List</h1>
@@ -25,22 +23,63 @@
             <div id="content__tasks">
                 <ul id="tasks__list">
                     <li class="hide list__item">
-                        <input type="checkbox" id="checkbox__"> 
-                        <label for="checkbox__" id="label"><p class="label__text"></p></label>
+                        <input type="checkbox" id="checkbox__">
+                        <label for="checkbox__" id="label">
+                            <p class="label__text"></p>
+                        </label>
                         <img class="trash" src="img/bin.png" alt="trash can">
                     </li>
                 </ul>
             </div>
         </section>
         <section id="container__add">
-            
-            <input id="content__text" type="text" placeholder="Escreva uma nova tarefa" maxlength="30" >
+
+            <input id="content__text" type="text" placeholder="Escreva uma nova tarefa" maxlength="30">
 
             <button id="add" type="submit">+ Nova Tarefa</button>
+
         </section>
     </main>
 
+    
+    <div class="icon">
+        <div class="title">Desenvolvido por:
+            <i><br>
+                <a href="https://github.com/DiogoLCarvalho" target="_blank">
+                    Diogo Lima Carvalho</a> <br>
+
+            </i>
+        </div>
+
+        <span><i class="fas fa-info-circle"></i></span>
+    </div>
+
+    <div class="icon">
+        <div class="title">Estilo Inspirado em:
+            <i><br>
+                <a href="https://dribbble.com/adriengervaix" target="_blank">
+                    Adrien Gervaix</a> <br>
+            </i>
+        </div>
+        <span><i class="fas fa-ruler-combined"></i></span>
+    </div>
+
+    <div class="icon" data-aberto="false">
+        <div class="theme">
+            <input type="radio" name="color" id="padrao" checked>
+            <label for="padrao">Padrão</label>
+            <br>
+            <input type="radio" name="color" id="darkMode">
+            <label for="darkMode">Dark Mode</label>
+        </div>
+        
+        <span><i class="fas fa-palette"></i></span>
+    </div>
+
+
     <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/f9e19193d6.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

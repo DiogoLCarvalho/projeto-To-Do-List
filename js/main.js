@@ -2,19 +2,20 @@ let btnDelete = document.querySelector('.trash');
 let inputText = document.querySelector('#content__text');
 let btnAdd = document.querySelector('#add');
 let ul = document.querySelector('#tasks__list');
+inputText.focus();
 
 function addTask() {
     if (inputText.value.trim() === '') {
-        alert('Erro ao digitar nova tarefa, Tente Novamente');
-    }else{
+        alert('Erro ao digitar nova tarefa, Tente Novamente:');
+    } else {
         const textLi = inputText.value;
         const li = document.querySelector('.list__item');
         const newTask = li.cloneNode(true);
 
 
-        newTask.querySelector('.label__text').textContent = textLi.toLowerCase();    
-        newTask.querySelector('#checkbox__').setAttribute('id', `#checkbox__${ul.childElementCount}`); 
-        newTask.querySelector('#label').setAttribute('for', `#checkbox__${ul.childElementCount}`); 
+        newTask.querySelector('.label__text').textContent = textLi.toLowerCase();
+        newTask.querySelector('#checkbox__').setAttribute('id', `#checkbox__${ul.childElementCount}`);
+        newTask.querySelector('#label').setAttribute('for', `#checkbox__${ul.childElementCount}`);
 
 
         newTask.classList.remove('list__item')
@@ -23,10 +24,10 @@ function addTask() {
 
 
         inputText.value = ''
-        inputText.focus();    
+        inputText.focus();
 
 
-        newTask.querySelector('.trash').addEventListener('click',function() {
+        newTask.querySelector('.trash').addEventListener('click', function () {
             taskRemove(this);
         });
     }
@@ -35,9 +36,9 @@ function addTask() {
 btnAdd.addEventListener('click', addTask);
 
 // Adicionar Com Tecla Enter
-inputText.addEventListener('keyup', function(e){ 
+inputText.addEventListener('keyup', function (e) {
     var key = e.which || e.keyCode;
-    if (key == 13) { 
+    if (key == 13) {
         addTask();
     }
 });
@@ -53,3 +54,19 @@ function taskRemove(parametro) {
     // Dentro desta unica li vc pode modificar, é como vc estivesse modiicando o document (q vira newtask)
     // Por conta disso vc pode usar o this ele referencia o elemento q esta sendo criado
 }
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++
+let themeIcon = document.querySelector('.icon:nth-of-type(3)');
+let MenuTrueFalse = themeIcon.dataset.aberto;
+
+const ligaDesligaMenu = () => {
+    if (MenuTrueFalse === 'false') {
+        MenuTrueFalse = 'true'
+    } else {
+        MenuTrueFalse = 'false'
+    }
+    themeIcon.dataset.aberto = MenuTrueFalse;
+};
+
+themeIcon.addEventListener('click', ligaDesligaMenu);

@@ -2,6 +2,9 @@ let btnDelete = document.querySelector('.trash');
 let inputText = document.querySelector('#content__text');
 let btnAdd = document.querySelector('#add');
 let ul = document.querySelector('#tasks__list');
+let mainTag = document.querySelector('#container');
+let icons = document.querySelectorAll('.icon');
+
 inputText.focus();
 
 function addTask() {
@@ -30,6 +33,15 @@ function addTask() {
         newTask.querySelector('.trash').addEventListener('click', function () {
             taskRemove(this);
         });
+
+
+//Aumentar tamanho do container das tarefas
+        if (ul.childElementCount === 15) {
+            mainTag.style.height = '120vh';
+            for (let i = 0; i < icons.length; i++) {
+                icons[i].style.top = '110%';
+            }
+        } 
     }
 }
 
@@ -45,6 +57,14 @@ inputText.addEventListener('keyup', function (e) {
 
 function taskRemove(parametro) {
     parametro.parentNode.remove(true);
+
+//Aumentar tamanho do container das tarefas
+    if (ul.childElementCount < 15) {
+        mainTag.style.height = '100vh';
+        for (let i = 0; i < icons.length; i++) {
+            icons[i].style.top = '90%';
+        }
+    }
 
     // Pegue o filho de newTask e remova
 
@@ -70,3 +90,12 @@ const ligaDesligaMenu = () => {
 };
 
 themeIcon.addEventListener('click', ligaDesligaMenu);
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++
+let htmlTag = document.querySelector('html');
+let darkmode = document.querySelector('input[type="checkbox"]#darkMode');
+
+darkmode.addEventListener('click', function () {
+    htmlTag.classList.toggle('dark-mode');
+});

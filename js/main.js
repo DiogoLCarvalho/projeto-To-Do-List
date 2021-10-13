@@ -35,13 +35,13 @@ function addTask() {
         });
 
 
-//Aumentar tamanho do container das tarefas
+        //Aumentar tamanho do container das tarefas
         if (ul.childElementCount === 15) {
             mainTag.style.height = '120vh';
             for (let i = 0; i < icons.length; i++) {
                 icons[i].style.top = '110%';
             }
-        } 
+        }
     }
 }
 
@@ -58,7 +58,7 @@ inputText.addEventListener('keyup', function (e) {
 function taskRemove(parametro) {
     parametro.parentNode.remove(true);
 
-//Aumentar tamanho do container das tarefas
+    //Aumentar tamanho do container das tarefas
     if (ul.childElementCount < 15) {
         mainTag.style.height = '100vh';
         for (let i = 0; i < icons.length; i++) {
@@ -96,6 +96,22 @@ themeIcon.addEventListener('click', ligaDesligaMenu);
 let htmlTag = document.querySelector('html');
 let darkmode = document.querySelector('input[type="checkbox"]#darkMode');
 
+
 darkmode.addEventListener('click', function () {
     htmlTag.classList.toggle('dark-mode');
+    localStorage.setItem('bgcolor', 'dark');
+
+    if (htmlTag.getAttribute('class') === 'dark-mode') {
+    } else {
+        localStorage.setItem('bgcolor', 'padrão');
+    }
 });
+
+if (localStorage.bgcolor === 'dark') {
+    htmlTag.classList.toggle('dark-mode');
+    darkmode.setAttribute('checked','checked');
+}else{
+    darkmode.removeAttribute('checked');
+}
+
+typeof(Storage)!='undefine' ? console.log('Seu navegador aceita armazenamento local') : console.log('Seu navegador não aceita armazenamento local')

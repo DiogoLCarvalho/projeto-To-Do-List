@@ -330,6 +330,9 @@ input[type="checkbox"]:checked+label>p {
 }
 
 @media(max-width:500px) {
+    .icon{
+        top:93.5%;
+    }
     #container__content, #content__text {
         width: 20rem;
     }

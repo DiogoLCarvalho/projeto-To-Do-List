@@ -7,7 +7,7 @@ https://diogolcarvalho.github.io/projeto-To-Do-List/
 ## Passo a Passo :keyboard:
 
 ### Explicando Destaques <i>JavaScript</i>
-A função <b>addTask</b> é a principal, é nela que a mágica acontece. Quando a função é inicializada, é executado um IF, verificando se o valor do input que o usuário digitou é válido (no caso, verifica se o input não está vazio). Depois da verificação, o valor do texto é retornado na variável textLi. O Li no documento HTML é selecionado, fazendo uma  cópia com o cloneNode e ele é adicionado no newTask. Esse Li é apenas um molde para manipulação, sendo que ele está oculto com a classe hide. 
+A função <b>addTask</b> é a principal, é nela que a mágica acontece. Quando a função é inicializada, é executado um IF, verificando se o valor do input que o usuário digitou é válido (no caso, verifica se o input não está vazio). Depois da verificação, o valor do texto é retornado na variável textLi. O Li no documento HTML é selecionado, fazendo uma  cópia com o cloneNode e é adicionado no newTask. Esse Li é apenas um molde para manipulação, sendo que ele está oculto com a classe hide. 
 
 ![Captura de tela 2021-10-14 114237](https://user-images.githubusercontent.com/84794798/137340649-25be0b07-869a-45d3-80da-4f23c10ac9f4.jpg)
 
@@ -46,5 +46,5 @@ Aqui estão todos os comandos para deixar em modo escuro. Ao clicar no <b>Dark M
 ![Captura de tela 2021-10-14 124026](https://user-images.githubusercontent.com/84794798/137351252-74c39c7b-392d-4e9c-905e-51c38e19be1b.png)
 
 ## Obrigado pela atenção :exclamation:
-Desenvolvido por: <a href="https://diogolcarvalho.github.io/projeto-portfolio/" target="_blank"> Diogo Lima Carvalho</a> <br>
-Estilo do projeto Inspirado em: <a href="https://dribbble.com/adriengervaix" target="_blank">Adrien Gervaix</a>
+* Desenvolvido por: <a href="https://diogolcarvalho.github.io/projeto-portfolio/" target="_blank"> Diogo Lima Carvalho</a> <br>
+* Estilo do projeto Inspirado em: <a href="https://dribbble.com/adriengervaix" target="_blank">Adrien Gervaix</a>
